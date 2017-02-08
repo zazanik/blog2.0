@@ -1,0 +1,66 @@
+{% extends 'AppBundle:Post:list.html.twig' %}
+
+{% block main %}
+
+    <main class="blog">
+
+        <!--  Single post  -->
+
+        <div class="post-thumbnail-bg" style="background-image: url({{ asset('' ~ post.image) }})">
+            <div class="shadow"></div>
+            <h2>{{ post.title|default('No title') }}</h2>
+        </div>
+        <div class="container">
+            <div class="row relative">
+                <div class="blog-posts col-xs-12 col-sm-12 col-md-8">
+                    <div class="post-single">
+
+                        <div class="clearfix">
+                            <div class="right pull-left">
+                                {#<div class="author">#}
+                                    {#<span>Author: </span><span><a href="{{ path('single_author', {'id': post.author.id}) }}">{{ post.author.firstName }} {{ post.author.lastName }}</a></span>#}
+                                {#</div>#}
+
+                                {#<div class="date">#}
+                                    {#<span>updated: </span>#}
+                                    {#<span>{{ post.updatedAt|date('l, F j, Y') }}</span>#}
+                                {#</div>#}
+
+                                {#<div class="categories">#}
+                                    {#<span>Category:</span>#}
+                                    {#{% for category in post.category %}#}
+                                        {#<a href="{{ path('category_edit', {'id': category.id}) }}">{{category.name}}, </a>#}
+                                    {#{% endfor %}#}
+                                {#</div>#}
+                            </div>
+
+
+                            {#{% if is_granted('ROLE_ADMIN') %}#}
+                                <div class="left pull-right">
+                                    <a class="btn btn-warning" href="{{ path("post_edit", {"id": post.id|default('No ID')}) }}">EDIT POST</a>
+                                </div>
+                            {#{% endif %}#}
+
+
+                        </div>
+
+                        <div class="text">
+                            {{ post.content|default('No content') }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="static col-xs-12 col-sm-12 col-md-4">
+                    <div class="sidebar"></div>
+                </div>
+                <!-- /Sidebar -->
+            </div>
+
+        </div>
+        <!--  /Single post  -->
+
+
+    </main>
+
+{% endblock main %}
