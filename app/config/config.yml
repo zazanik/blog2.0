@@ -8,6 +8,7 @@ imports:
 parameters:
     locale: en
     images_directory: '%kernel.root_dir%/../web'
+    app.pgManager.limit: '10'
 
 framework:
     #esi:             ~

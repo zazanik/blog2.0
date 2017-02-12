@@ -3,9 +3,7 @@
 namespace AppBundle\Form;
 
 use AppBundle\Entity\Category;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -19,16 +17,16 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, array(
-                'label'     => false,
-                'attr'      => array(
-                    'placeholder'   => 'Title'
-                )
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Title',
+                ),
             ))
             ->add('description', TextType::class, array(
-                'label'     => false,
-                'attr'      => array(
-                    'placeholder'   => 'Content'
-                )
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Content',
+                ),
             ))
         ;
     }
@@ -40,8 +38,8 @@ class CategoryType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => Category::class,
-            'attr'       => array(
-                'novalidate'=>'novalidate'
+            'attr' => array(
+                'novalidate' => 'novalidate',
             ),
         ));
     }
@@ -53,6 +51,4 @@ class CategoryType extends AbstractType
     {
         return 'appbundle_category';
     }
-
-
 }

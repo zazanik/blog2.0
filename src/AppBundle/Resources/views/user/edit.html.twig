@@ -1,21 +1,18 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
-{% block body %}
-    <h1>User edit</h1>
+{% block main %}
+    <main class="blog create-post">
+        <div class="container">
+            <div class="row margin-top">
+                <div class="col-xs-12 col-md-4 col-md-offset-4">
+                    <h1>User creation</h1>
+                    {{ form_start(edit_form) }}
+                    {{ form_widget(edit_form) }}
+                    <input type="submit" value="Create" />
+                    {{ form_end(edit_form) }}
+                </div>
+            </div>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('user_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        </div>
+    </main>
 {% endblock %}

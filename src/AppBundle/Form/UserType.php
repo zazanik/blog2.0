@@ -13,16 +13,16 @@ class UserType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('username')->add('password')->add('firstName')->add('lastName')        ;
+        $builder->add('username')->add('password')->add('firstName')->add('lastName');
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\User'
+            'data_class' => 'AppBundle\Entity\User',
         ));
     }
 
@@ -33,6 +33,4 @@ class UserType extends AbstractType
     {
         return 'appbundle_user';
     }
-
-
 }

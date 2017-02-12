@@ -37,25 +37,25 @@
                         </div>
                     {% endfor %}
 
-                    {#{% if maxPages > 1 %}#}
-                        {#<ul class="pagination pagination-md" style="margin-left: 40%">#}
-                            {#<li {{ thisPage == 1 ? 'class="disabled"' }}>#}
-                                {#<a href="{{ path(app.request.attributes.get('_route'), { page: thisPage-1 < 1 ? 1 : thisPage-1 }) }}">«</a>#}
-                            {#</li>#}
+                    {% if maxPages > 1 %}
+                        <ul class="pagination pagination-md" style="margin-left: 40%">
+                            <li {{ thisPage == 1 ? 'class="disabled"' }}>
+                                <a href="{{ path(app.request.attributes.get('_route'), { page: thisPage-1 < 1 ? 1 : thisPage-1 }) }}">«</a>
+                            </li>
 
 
-                            {#{% for i in 1..maxPages %}#}
-                                {#<li {{ thisPage == i ? 'class="active"' }}>#}
-                                    {#<a href="{{ path(app.request.attributes.get('_route'), { page: i }) }}">{{ i }}</a>#}
-                                {#</li>#}
-                            {#{% endfor %}#}
+                            {% for i in 1..maxPages %}
+                                <li {{ thisPage == i ? 'class="active"' }}>
+                                    <a href="{{ path(app.request.attributes.get('_route'), { page: i }) }}">{{ i }}</a>
+                                </li>
+                            {% endfor %}
 
 
-                            {#<li {{ thisPage == maxPages ? 'class="disabled"' }}>#}
-                                {#<a href="{{ path(app.request.attributes.get('_route'), { page: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">»</a>#}
-                            {#</li>#}
-                        {#</ul>#}
-                    {#{% endif %}#}
+                            <li {{ thisPage == maxPages ? 'class="disabled"' }}>
+                                <a href="{{ path(app.request.attributes.get('_route'), { page: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">»</a>
+                            </li>
+                        </ul>
+                    {% endif %}
 
                 </div>
 

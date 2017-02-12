@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * User
+ * User.
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
@@ -67,9 +67,8 @@ class User
      */
     private $posts;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -79,7 +78,7 @@ class User
     }
 
     /**
-     * Set username
+     * Set username.
      *
      * @param string $username
      *
@@ -93,7 +92,7 @@ class User
     }
 
     /**
-     * Get username
+     * Get username.
      *
      * @return string
      */
@@ -103,7 +102,7 @@ class User
     }
 
     /**
-     * Set password
+     * Set password.
      *
      * @param string $password
      *
@@ -117,7 +116,7 @@ class User
     }
 
     /**
-     * Get password
+     * Get password.
      *
      * @return string
      */
@@ -127,7 +126,7 @@ class User
     }
 
     /**
-     * Set firstName
+     * Set firstName.
      *
      * @param string $firstName
      *
@@ -141,7 +140,7 @@ class User
     }
 
     /**
-     * Get firstName
+     * Get firstName.
      *
      * @return string
      */
@@ -151,7 +150,7 @@ class User
     }
 
     /**
-     * Set lastName
+     * Set lastName.
      *
      * @param string $lastName
      *
@@ -165,7 +164,7 @@ class User
     }
 
     /**
-     * Get lastName
+     * Get lastName.
      *
      * @return string
      */
@@ -221,8 +220,4 @@ class User
     {
         $this->posts = $posts;
     }
-
-
-
 }
-

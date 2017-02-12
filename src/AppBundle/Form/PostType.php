@@ -20,31 +20,31 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, array(
-                'label'     => false,
-                'attr'      => array(
-                    'placeholder'   => 'Title'
-                )
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Title',
+                ),
             ))
             ->add('content', TextType::class, array(
-                'label'     => false,
-                'attr'      => array(
-                    'placeholder'   => 'Content'
-                )
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Content',
+                ),
             ))
             ->add('image', FileType::class, array(
-                'label'     => false
+                'label' => false,
             ))
             ->add('category', EntityType::class, array(
-                'class'     => Category::class,
-                'choice_label'  => 'name'
+                'class' => Category::class,
+                'choice_label' => 'name',
             ))
             ->add('user', EntityType::class, array(
-                'class'     => 'AppBundle:User',
-                'choice_label'  => 'username'
+                'class' => 'AppBundle:User',
+                'choice_label' => 'username',
             ))
         ;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -52,8 +52,8 @@ class PostType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\Post',
-            'attr'       => array(
-                'novalidate'=>'novalidate'
+            'attr' => array(
+                'novalidate' => 'novalidate',
             ),
         ));
     }
@@ -65,6 +65,4 @@ class PostType extends AbstractType
     {
         return 'appbundle_post';
     }
-
-
 }

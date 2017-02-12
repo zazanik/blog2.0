@@ -19,8 +19,6 @@ class FileUploader
 
         $firstLatter = str_split($fileName);
 
-
-
         $file->move($this->targetDir.'/uploads/'.'/'.$firstLatter[0].'/'.$firstLatter[1], $fileName);
 
         return 'uploads/'.$firstLatter[0].'/'.$firstLatter[1].'/'.$fileName;

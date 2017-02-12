@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Category
+ * Category.
  *
  * @ORM\Table(name="category")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\CategoryRepository")
@@ -53,9 +53,8 @@ class Category
      */
     private $posts;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -65,7 +64,7 @@ class Category
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -79,7 +78,7 @@ class Category
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -89,7 +88,7 @@ class Category
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
      *
@@ -103,7 +102,7 @@ class Category
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */
@@ -159,6 +158,4 @@ class Category
     {
         $this->posts = $posts;
     }
-
 }
-

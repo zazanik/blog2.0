@@ -7,7 +7,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Post
+ * Post.
  *
  * @ORM\Table(name="post")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PostRepository")
@@ -67,9 +67,8 @@ class Post
      */
     private $category;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -79,7 +78,7 @@ class Post
     }
 
     /**
-     * Set title
+     * Set title.
      *
      * @param string $title
      *
@@ -93,7 +92,7 @@ class Post
     }
 
     /**
-     * Get title
+     * Get title.
      *
      * @return string
      */
@@ -103,7 +102,7 @@ class Post
     }
 
     /**
-     * Set content
+     * Set content.
      *
      * @param string $content
      *
@@ -117,7 +116,7 @@ class Post
     }
 
     /**
-     * Get content
+     * Get content.
      *
      * @return string
      */
@@ -127,7 +126,7 @@ class Post
     }
 
     /**
-     * Set image
+     * Set image.
      *
      * @param string $image
      *
@@ -141,7 +140,7 @@ class Post
     }
 
     /**
-     * Get image
+     * Get image.
      *
      * @return string
      */
@@ -213,7 +212,4 @@ class Post
     {
         $this->category = $category;
     }
-
-
-
 }

@@ -4,6 +4,10 @@ parameters:
 #    parameter_name: value
 
 services:
+    app.pgManager:
+        class: AppBundle\Services\PaginateManager
+        arguments: ['%app.pgManager.limit%']
+
     gedmo.listener.timestampable:
         class: Gedmo\Timestampable\TimestampableListener
         tags:
